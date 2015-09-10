@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+- 1.9.3
+- 2.1.5
+services:
+- mongodb
+before_script:
+- cp config/application.yml.example config/application.yml
+cache: bundler
+bundler_args: --without production
+sudo: false
+notifications:
+  slack:
+    secure: n1XVXXPj97qSyqkCh8jsUUhm5B4q3g2/Hd7uTQb9r6IKQqN7IP9nRJEGBx2+8SvBFz+FF0x/5jp0NTE0fmuhHnYzJmcQ3dUX8Lp/i8XtlXL6Vzy6umGGw0AsZRXgk2kGQEwwr3QaZOEJuR8m1nIR+0xkiqpltaueeU3c7z8e854=
