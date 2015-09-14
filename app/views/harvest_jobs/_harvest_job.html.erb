@@ -125,23 +125,37 @@ http://digitalnz.org/supplejack
   <p><%= t("harvest_jobs.no_validation_errors") %></p>
   <% end %>
 
+  <h5><%= t("harvest_jobs.harvest_errors") %> <span class="errors-count">(<%= @harvest_job.harvest_errors.count %>)</span></h5>
+  <% if @harvest_job.harvest_errors.any? %>
+    <div id="harvest-job-invalid-errors">
+      <div id="accordion">
+        <% @harvest_job.harvest_errors.each do |record| %>
+          <h3 class="error">
+            <span><%= "#{record.url} : #{record.message}" %></span>
+          </h3>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+  <p><%= t("harvest_jobs.no_harvest_errors") %></p>
+  <% end %>
+
   <h5><%= t("harvest_jobs.failed_records") %> <span class="errors-count">(<%= @harvest_job.failed_records_count.to_i %>)</span></h5>
 
   <% if @harvest_job.failed_records.any? %>
-  <div id="harvest-job-failed-errors">
-    <div id="accordion">
-      <% @harvest_job.failed_records.each do |record| %>
-        <h3 class="error">
-          <span><%= record.message %></span><span class="right"><%= record.created_at.try(:to_datetime) %></span>
-        </h3>
-        <div>
-          <%= pretty_format(@harvest_job.parser_id, record.raw_data) %>
-        </div>
-      <% end %>
+    <div id="harvest-job-failed-errors">
+      <div id="accordion">
+        <% @harvest_job.failed_records.each do |record| %>
+          <h3 class="error">
+            <span><%= record.message %></span><span class="right"><%= record.created_at.try(:to_datetime) %></span>
+          </h3>
+          <div>
+            <%= pretty_format(@harvest_job.parser_id, record.raw_data) %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
   <% else %>
-  <p><%= t("harvest_jobs.no_failure_errors") %></p>
+    <p><%= t("harvest_jobs.no_failure_errors") %></p>
   <% end %>
-
 <% end %>
