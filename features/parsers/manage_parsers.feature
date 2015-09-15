@@ -1,4 +1,4 @@
-
+@vcr
 Feature: Manage Parsers
 
   Background:

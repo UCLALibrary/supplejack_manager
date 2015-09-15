@@ -1767,4 +1767,102 @@ http_interactions:
       string: ! '{"_id":"55f8a28bf2996b7328000003","name":"source 1","partner_id":"55f8a28bf2996b7328000002","source_id":"source_1","status":"active"}'
     http_version: 
   recorded_at: Tue, 15 Sep 2015 22:58:20 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/partners/55f8a38df2996bcd6c000002/sources
+    body:
+      encoding: US-ASCII
+      string: source[_id]=55f8a38df2996bcd6c000003&source[name]=source%201&source[source_id]=source_1&source[partner_id]=55f8a38df2996bcd6c000002
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '131'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"2b87da4bcd4982c76c09fc8b4d8e9213"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 728011d1-77cb-4810-a8ef-8ab39d47e49e
+      X-Runtime:
+      - '0.123334'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.2 codename Doc Brown
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"55f8a38df2996bcd6c000003","name":"source 1","partner_id":"55f8a38df2996bcd6c000002","source_id":"source_1","status":"active"}'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 23:02:37 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/partners/55f8a38df2996bcd6c000002/sources
+    body:
+      encoding: US-ASCII
+      string: source[_id]=55f8a38df2996bcd6c000003&source[name]=source%201&source[source_id]=source_1&source[partner_id]=55f8a38df2996bcd6c000002
+    headers:
+      Accept:
+      - ! '*/*; q=0.5, application/xml'
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '131'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - ! '"2b87da4bcd4982c76c09fc8b4d8e9213"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Meta-Request-Version:
+      - 0.3.4
+      X-Request-Id:
+      - 73d7149d-7be4-48ac-92d4-a579b2dcb075
+      X-Runtime:
+      - '0.011765'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.2 codename Doc Brown
+    body:
+      encoding: US-ASCII
+      string: ! '{"_id":"55f8a38df2996bcd6c000003","name":"source 1","partner_id":"55f8a38df2996bcd6c000002","source_id":"source_1","status":"active"}'
+    http_version: 
+  recorded_at: Tue, 15 Sep 2015 23:02:38 GMT
 recorded_with: VCR 2.9.2
