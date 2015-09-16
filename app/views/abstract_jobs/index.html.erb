@@ -66,7 +66,7 @@ http://digitalnz.org/supplejack
       <% end %>
 
       <td><%= abstract_job.records_count %></td>
-      <td><%= abstract_job.invalid_records_count %> | <%= abstract_job.harvest_errors.count %> | <%= abstract_job.failed_records_count %></td>
+      <td><%= abstract_job.invalid_records_count %> | <%= abstract_job.harvest_errors_count %> | <%= abstract_job.failed_records_count %></td>
 
       <td>
         <% if abstract_job._type == "HarvestJob" %>

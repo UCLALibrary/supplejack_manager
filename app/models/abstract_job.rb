@@ -29,6 +29,7 @@ class AbstractJob < ActiveResource::Base
     attribute :environment,           :string
     attribute :failed_records_count,  :integer
     attribute :invalid_records_count, :integer
+    attribute :harvest_errors_count,  :integer
     attribute :created_at,            :datetime
     attribute :incremental,           :boolean
     attribute :enrichments,           :string
@@ -92,6 +93,6 @@ class AbstractJob < ActiveResource::Base
   end
 
   def total_errors_count
-    failed_records_count.to_i + invalid_records_count.to_i
+    failed_records_count.to_i + invalid_records_count.to_i + harvest_errors_count.to_i
   end
 end

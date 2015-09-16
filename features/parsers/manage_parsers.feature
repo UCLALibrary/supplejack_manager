@@ -10,7 +10,6 @@ Feature: Manage Parsers
     And partner and data source exist
     Given I am logged in as "admin@example.com"
 
-  @vcr
   Scenario: Create a new parser
     When I visit "/parsers"
     And I click the link "New Parser Script"

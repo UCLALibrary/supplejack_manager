@@ -136,10 +136,11 @@ describe HarvestJob do
   end
 
   describe "#total_errors_count" do
-    it "should add the failed and invalid record counts" do
+    it "should add the failed, harvest errors and invalid record counts" do
       job.stub(:failed_records_count) { 5 }
       job.stub(:invalid_records_count) { 3 }
-      job.total_errors_count.should eq 8
+      job.stub(:harvest_errors_count) { 2 }
+      job.total_errors_count.should eq 10
     end
   end
 
