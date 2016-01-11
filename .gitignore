@@ -81,4 +81,4 @@ pickle-email-*.html
 /harvester-manager.sublime-workspace
 
 /config/initializers/env_variables.rb
-
+id_rsa
