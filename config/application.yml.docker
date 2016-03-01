@@ -13,13 +13,13 @@
 # Running the Manager allows you to harvest in production environment.
 
 development:
-  WORKER_HOST: http://37.139.24.218:3000
+  WORKER_HOST: http://37.139.24.218:3002
   WORKER_API_KEY: workerkey
   API_HOST: http://37.139.25.226:3000
   API_MONGOID_HOSTS: 37.139.25.224:27017
 
 staging:
-  WORKER_HOST: http://37.139.24.218:3000
+  WORKER_HOST: http://37.139.24.218:3002
   WORKER_API_KEY: workerkey
   API_HOST: http://37.139.25.226:3000
   API_MONGOID_HOSTS: 37.139.25.224:27017
