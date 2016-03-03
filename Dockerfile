@@ -29,7 +29,6 @@ COPY config/mongoid.yml config/mongoid.yml
 # Cache bundle install
 ENV BUNDLE_PATH /bundle
 
-RUN bundle install --deployment
+RUN bundle install
 WORKDIR /manager
-COPY config/application.yml.docker config/application.yml
 ADD . /manager
