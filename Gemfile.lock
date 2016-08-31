@@ -204,7 +204,7 @@ GEM
     kgio (2.10.0)
     launchy (2.1.2)
       addressable (~> 2.3)
-    libv8 (3.16.14.7)
+    libv8 (3.16.14.15)
     libwebsocket (0.1.7.1)
       addressable
       websocket
