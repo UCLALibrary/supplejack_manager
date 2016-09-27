@@ -11,3 +11,6 @@ require File.expand_path('../application', __FILE__)
 
 # Initialize the rails application
 HarvesterManager::Application.initialize!
+active_resource_logger = Logger.new('log/active_resource.log', 'daily'); 
+active_resource_logger.level = Rails.env.dev? ? Logger::DEBUG : Logger::INFO; 
+ActiveResource::Base.logger = active_resource_logger
